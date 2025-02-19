@@ -576,7 +576,7 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        { 'ts-standard' },
+        -- { 'ts-standard' },
         --
 
         lua_ls = {
@@ -955,5 +955,9 @@ vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = '#51B3EC', bold = true })
 vim.api.nvim_set_hl(0, 'LineNr', { fg = 'white', bold = true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#FB508F', bold = true })
+
+-- get rid of those annoying which key warnings
+vim.opt.shortmess:append 'c'
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
